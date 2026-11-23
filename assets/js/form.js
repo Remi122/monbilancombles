@@ -12,7 +12,7 @@
   var retour = document.getElementById('form-retour');
   var erreurEnvoi = document.getElementById('form-erreur');
   var boutonEnvoi = document.getElementById('form-envoyer');
-  var choix = ['statut', 'logement', 'combles', 'annee', 'delai'];
+  var choix = ['statut', 'logement', 'combles', 'annee'];
   var courant = 0;
 
   var regles = {
