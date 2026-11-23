@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mon Bilan Combles : le bilan gratuit de l'isolation de vos combles</title>
+<meta name="description" content="Répondez à quelques questions sur votre maison. Un artisan de votre secteur vous rappelle avec un état des lieux de l'isolation de vos combles. Gratuit et sans engagement.">
+<!-- Tant que les mentions légales et le formulaire ne sont pas finalisés, la page n'est pas proposée aux moteurs de recherche. Retirer cette ligne au lancement. -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#173f35">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Mon Bilan Combles : le bilan gratuit de l'isolation de vos combles">
+<meta property="og:description" content="Quelques questions sur votre maison, puis un artisan de votre secteur vous rappelle. Gratuit et sans engagement.">
+<link rel="icon" type="image/svg+xml" href="assets/img/symbole.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/symbole-512.png">
+<link rel="preload" href="assets/fonts/Fraunces-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/InstrumentSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="lien-evitement" href="#bilan">Aller au formulaire</a>
+
+<header class="conteneur entete">
+  <a class="entete__logo" href="./" aria-label="Mon Bilan Combles, accueil"><img src="assets/img/logo.svg" alt="Mon Bilan Combles" width="240" height="44"></a>
+  <span class="mbc-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Gratuit et sans engagement</span>
+</header>
+
+<main>
+  <section class="conteneur hero">
+    <div class="hero__texte">
+      <p class="surtitre">Bilan d'isolation des combles</p>
+      <h1>Vos combles sont-ils <em>bien isolés</em>&nbsp;?</h1>
+      <p class="hero__chapo">Répondez à quelques questions sur votre maison. Un artisan de votre secteur vous rappelle avec un état des lieux et une estimation des travaux.</p>
+    </div>
+
+    <div class="maison" id="bilan">
+      <svg class="toit" viewBox="0 0 440 72" preserveAspectRatio="none" aria-hidden="true"><path d="M220 9 L431 65 H9 Z"/></svg>
+      <form class="form" id="formulaire-bilan" novalidate>
+        <div id="form-corps">
+          <div class="form__tete">
+            <h2 id="form-titre">Demandez votre bilan</h2>
+            <p class="form__etape" id="form-etape" aria-live="polite">Étape 1 sur 3</p>
+          </div>
+          <div class="form__jauge" aria-hidden="true"><i id="form-jauge"></i></div>
+
+          <!-- Étape 1 -->
+          <div class="form__pas est-actif" data-pas="1">
+            <fieldset class="mbc-champ" data-champ="logement">
+              <legend class="mbc-champ__label">Votre logement</legend>
+              <div class="mbc-choix">
+                <label class="mbc-choix__option"><input type="radio" name="logement" value="Maison" required><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11.5L12 4l8.5 7.5"/><path d="M6 10v9.5h12V10"/></svg>Maison</span></label>
+                <label class="mbc-choix__option"><input type="radio" name="logement" value="Appartement"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M9 8h1.5M13.5 8H15M9 12h1.5M13.5 12H15M9 16h1.5M13.5 16H15"/></svg>Appartement</span></label>
+              </div>
+              <p class="mbc-champ__erreur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.2"/></svg><span>Choisissez maison ou appartement.</span></p>
+            </fieldset>
+            <div class="mbc-champ" data-champ="code_postal">
+              <label class="mbc-champ__label" for="code_postal">Code postal</label>
+              <input class="mbc-champ__input" id="code_postal" name="code_postal" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="Ex. 69003" aria-describedby="code_postal-aide" required>
+              <p class="mbc-champ__aide" id="code_postal-aide">Pour trouver un artisan près de chez vous.</p>
+              <p class="mbc-champ__erreur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.2"/></svg><span>Le code postal compte 5 chiffres.</span></p>
+            </div>
+            <button class="mbc-btn mbc-btn--bloc" type="button" data-suivant>Continuer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="form__note">Gratuit. Vous ne vous engagez à rien.</p>
+          </div>
+
+          <!-- Étape 2 -->
+          <div class="form__pas" data-pas="2">
+            <fieldset class="mbc-champ" data-champ="combles">
+              <legend class="mbc-champ__label">Vos combles aujourd'hui</legend>
+              <div class="mbc-choix mbc-choix--pile">
+                <label class="mbc-choix__option"><input type="radio" name="combles" value="Perdus" required><span>Perdus, on n'y vit pas</span></label>
+                <label class="mbc-choix__option"><input type="radio" name="combles" value="Aménagés"><span>Aménagés, on y vit</span></label>
+                <label class="mbc-choix__option"><input type="radio" name="combles" value="Ne sait pas"><span>Je ne sais pas</span></label>
+              </div>
+              <p class="mbc-champ__erreur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.2"/></svg><span>Choisissez une réponse, même « Je ne sais pas ».</span></p>
+            </fieldset>
+            <fieldset class="mbc-champ" data-champ="statut">
+              <legend class="mbc-champ__label">Vous êtes</legend>
+              <div class="mbc-choix">
+                <label class="mbc-choix__option"><input type="radio" name="statut" value="Propriétaire" required><span>Propriétaire</span></label>
+                <label class="mbc-choix__option"><input type="radio" name="statut" value="Locataire"><span>Locataire</span></label>
+              </div>
+              <p class="mbc-champ__erreur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.2"/></svg><span>Indiquez si vous êtes propriétaire ou locataire.</span></p>
+            </fieldset>
+            <button class="mbc-btn mbc-btn--bloc" type="button" data-suivant>Continuer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button class="mbc-lien-retour" type="button" data-retour>Revenir à l'étape précédente</button>
+          </div>
+
+          <!-- Étape 3 -->
+          <div class="form__pas" data-pas="3">
+            <div class="mbc-champ" data-champ="nom">
+              <label class="mbc-champ__label" for="nom">Prénom et nom</label>
+              <input class="mbc-champ__input" id="nom" name="nom" type="text" autocomplete="name" required>
+              <p class="mbc-champ__erreur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.2"/></svg><span>Indiquez votre prénom et votre nom.</span></p>
+            </div>
+            <div class="mbc-champ" data-champ="telephone">
+              <label class="mbc-champ__label" for="telephone">Téléphone</label>
+              <input class="mbc-champ__input" id="telephone" name="telephone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ex. 06 12 34 56 78" aria-describedby="telephone-aide" required>
+              <p class="mbc-champ__aide" id="telephone-aide">L'artisan vous rappelle à ce numéro.</p>
+              <p class="mbc-champ__erreur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.2"/></svg><span>Ce numéro semble incomplet : 10 chiffres attendus.</span></p>
+            </div>
+            <div class="mbc-champ" data-champ="email">
+              <label class="mbc-champ__label" for="email">E-mail</label>
+              <input class="mbc-champ__input" id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
+              <p class="mbc-champ__erreur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.2"/></svg><span>Vérifiez l'adresse, par exemple prenom@exemple.fr.</span></p>
+            </div>
+            <div class="mbc-champ" data-champ="consentement">
+              <label class="mbc-case"><input type="checkbox" name="consentement" value="oui" required><span>J'accepte que Mon Bilan Combles transmette ma demande à un artisan partenaire, qui me recontactera à ce sujet. <a href="confidentialite.html">Politique de confidentialité</a></span></label>
+              <p class="mbc-champ__erreur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.2"/></svg><span>Cochez la case pour que l'artisan puisse vous rappeler.</span></p>
+            </div>
+            <div class="form__piege" aria-hidden="true"><label>Ne pas remplir ce champ <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></div>
+            <p class="form__message form__message--erreur" id="form-erreur" role="alert"></p>
+            <button class="mbc-btn mbc-btn--bloc" type="submit" id="form-envoyer">Obtenir mon bilan gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button class="mbc-lien-retour" type="button" data-retour>Revenir à l'étape précédente</button>
+          </div>
+        </div>
+
+        <!-- Confirmation -->
+        <div class="form__merci" id="form-merci" tabindex="-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          <h2>Votre demande est bien partie</h2>
+          <p>Un artisan de votre secteur vous rappelle au numéro indiqué. Vous n'avez rien d'autre à faire.</p>
+        </div>
+      </form>
+    </div>
+
+    <ul class="mbc-liste-coches hero__coches">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Aucun paiement demandé, à aucun moment</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Vous décidez ensuite de donner suite ou non</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Deux minutes, sans créer de compte</li>
+    </ul>
+  </section>
+
+  <div class="bandeau">
+    <ul class="conteneur bandeau__liste">
+      <li class="mbc-pastille mbc-pastille--sombre"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Gratuit</li>
+      <li class="mbc-pastille mbc-pastille--sombre"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sans engagement</li>
+      <li class="mbc-pastille mbc-pastille--sombre"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Artisan de votre secteur</li>
+    </ul>
+  </div>
+
+  <section class="section">
+    <div class="conteneur pertes">
+      <div>
+        <p class="surtitre">Pourquoi commencer par le toit</p>
+        <p class="pertes__chiffre"><span>25 à 30&nbsp;%</span></p>
+        <h2 class="titre-1">de la chaleur d'une maison non isolée part par le toit</h2>
+        <p>L'air chaud monte. Dans une maison construite avant 1974 et jamais isolée, le toit est le premier endroit par où le chauffage s'échappe, devant les murs et les fenêtres.</p>
+        <p>C'est aussi l'endroit le plus simple à traiter : dans des combles perdus, l'isolant se pose sur le plancher, sans toucher aux pièces de vie.</p>
+        <p class="pertes__source">Source : ADEME, infographie <a href="https://librairie.ademe.fr/ged/979/infographie-pourquoi-comment-isoler-logement-202212.pdf" rel="noopener">« Pourquoi et comment isoler son logement »</a>.</p>
+      </div>
+      <ul class="barres" aria-label="Par où part la chaleur d'une maison d'avant 1974 non isolée">
+        <li class="est-toit" style="--part: 100%"><b>Toit</b><span>25 à 30&nbsp;%</span><i></i></li>
+        <li style="--part: 83%"><b>Murs</b><span>20 à 25&nbsp;%</span><i></i></li>
+        <li style="--part: 83%"><b>Air renouvelé et fuites</b><span>20 à 25&nbsp;%</span><i></i></li>
+        <li style="--part: 50%"><b>Fenêtres</b><span>10 à 15&nbsp;%</span><i></i></li>
+        <li style="--part: 33%"><b>Planchers bas</b><span>7 à 10&nbsp;%</span><i></i></li>
+        <li style="--part: 33%"><b>Ponts thermiques</b><span>5 à 10&nbsp;%</span><i></i></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="conteneur">
+      <p class="surtitre">Comment ça marche</p>
+      <h2 class="titre-1">Trois étapes, dont une seule pour vous</h2>
+      <ol class="etapes">
+        <li><h3 class="titre-3">Vous répondez à quelques questions</h3><p>Type de logement, état des combles, code postal. Comptez deux minutes.</p></li>
+        <li><h3 class="titre-3">Un artisan de votre secteur vous rappelle</h3><p>Il reprend vos réponses avec vous et convient d'un passage si c'est utile.</p></li>
+        <li><h3 class="titre-3">Vous recevez son état des lieux</h3><p>Avec une estimation des travaux. Vous décidez ensuite, sans obligation.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur faq">
+      <p class="surtitre">Questions fréquentes</p>
+      <h2 class="titre-1">Ce qu'on nous demande avant de remplir le formulaire</h2>
+      <details>
+        <summary>Le bilan est-il vraiment gratuit&nbsp;?</summary>
+        <p>Oui. Mon Bilan Combles ne vous demande aucun paiement, ni maintenant ni plus tard. Le service est financé par les artisans partenaires.</p>
+      </details>
+      <details>
+        <summary>Qui va me rappeler&nbsp;?</summary>
+        <p>Un artisan partenaire qui intervient dans votre secteur. Il vous appelle au numéro que vous avez indiqué dans le formulaire.</p>
+      </details>
+      <details>
+        <summary>Que deviennent mes coordonnées&nbsp;?</summary>
+        <p>Elles servent à traiter votre demande : nous les transmettons à l'artisan partenaire chargé de vous rappeler. Le détail figure dans notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+      </details>
+      <details>
+        <summary>Suis-je obligé de faire des travaux ensuite&nbsp;?</summary>
+        <p>Non. Le bilan vous donne un état des lieux et une estimation. Vous restez libre de donner suite, de comparer avec d'autres devis ou de ne rien faire.</p>
+      </details>
+      <details>
+        <summary>Je suis locataire, puis-je demander un bilan&nbsp;?</summary>
+        <p>Oui. Les travaux, eux, se décident avec votre propriétaire : c'est lui qui les commande.</p>
+      </details>
+      <details>
+        <summary>Existe-t-il des aides pour isoler ses combles&nbsp;?</summary>
+        <p>Selon votre situation et les travaux prévus, des aides publiques peuvent exister. Leurs conditions changent souvent. Le service public <a href="https://france-renov.gouv.fr" rel="noopener">France Rénov'</a> donne les règles à jour et vous conseille gratuitement.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section final">
+    <div class="conteneur">
+      <h2 class="titre-1">Deux minutes pour savoir où en sont vos combles</h2>
+      <p>Quelques questions, puis un artisan de votre secteur vous rappelle.</p>
+      <a class="mbc-btn" href="#bilan">Obtenir mon bilan gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="conteneur pied__grille">
+    <div>
+      <img src="assets/img/logo-fond-sombre.svg" alt="Mon Bilan Combles" width="197" height="36">
+      <p class="pied__mention" style="margin-top: 16px">Mon Bilan Combles est un service privé, indépendant de l'État et des organismes publics.</p>
+    </div>
+    <nav aria-label="Informations légales">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/form.js"></script>
+</body>
+</html>
