@@ -101,9 +101,8 @@ sup { font-size: .65em; line-height: 0; }
 .mbc-liste-coches .ico { width: 22px; height: 22px; margin-top: 3px; color: var(--mousse); stroke-width: 2.5; }
 
 /* ---------- En-tête ---------- */
-.entete { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding-top: var(--space-4); padding-bottom: var(--space-4); }
+.entete.conteneur { display: flex; align-items: center; padding-top: var(--space-6); padding-bottom: var(--space-6); }
 .entete__logo img { display: block; height: 36px; width: auto; }
-.entete .mbc-pastille { display: none; }
 
 /* ---------- Accroche ---------- */
 .hero { position: relative; margin: 0 var(--space-2); padding: var(--space-8) 0; border-radius: calc(var(--radius-lg) * 1.5); background: var(--sapin); color: var(--lin); overflow: hidden; }
@@ -114,9 +113,6 @@ sup { font-size: .65em; line-height: 0; }
 .hero h1 em { font-style: normal; color: var(--laine); }
 .hero__texte p { max-width: 520px; font-size: 18px; line-height: 28px; }
 .hero__texte p + p { margin-top: var(--space-3); }
-.hero__preuve + p { margin-top: 0; }
-.hero__preuve strong { color: var(--laine); }
-.hero__preuve, .hero__texte p:last-child { display: none; }
 
 /* ---------- Formulaire ---------- */
 .form { background: var(--blanc); color: var(--sapin); border-radius: var(--radius-lg); box-shadow: var(--ombre-formulaire); padding: var(--space-6); scroll-margin-top: var(--space-4); }
@@ -174,8 +170,6 @@ legend.form__question { margin-bottom: var(--space-3); }
 .aide__icone { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; margin-bottom: var(--space-4); border-radius: var(--radius-md); background: var(--blanc); color: var(--sapin); }
 .aide__chiffre { font-family: var(--font-titre); font-weight: 600; font-size: 36px; line-height: 40px; letter-spacing: -.015em; }
 .aide__nom { margin: var(--space-1) 0 var(--space-2); font-size: 16px; font-weight: 700; }
-.conditions { margin-top: var(--space-6); padding: var(--space-6); border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px var(--ligne); }
-.conditions__titre { margin-bottom: var(--space-4); font-family: var(--font-titre); font-weight: 600; font-size: 20px; line-height: 26px; }
 
 /* ---------- Étapes ---------- */
 .etapes { display: grid; gap: var(--space-3); margin: 0; padding: 0; list-style: none; counter-reset: etape; }
@@ -209,7 +203,7 @@ legend.form__question { margin-bottom: var(--space-3); }
 /* ---------- Appel final ---------- */
 .final { background: var(--sapin); color: var(--lin); text-align: center; }
 .final h2 { color: var(--lin); margin-left: auto; margin-right: auto; }
-.final p { max-width: 520px; margin: 0 auto var(--space-8); font-size: 18px; line-height: 28px; }
+.final h2 { margin-bottom: var(--space-8); }
 .final .mbc-btn:focus-visible { outline-color: var(--laine); }
 
 /* ---------- Pied de page ---------- */
@@ -236,16 +230,12 @@ legend.form__question { margin-bottom: var(--space-3); }
   .conteneur { padding: 0 var(--space-8); }
   .section { padding: var(--space-24) 0; }
   .titre-1 { font-size: 40px; line-height: 46px; }
-  .entete .mbc-pastille { display: inline-flex; }
   .entete__logo img { height: 44px; }
   .hero { margin: 0 var(--space-4); padding: var(--space-12) 0; border-radius: calc(var(--radius-lg) * 2); }
-  .hero__preuve, .hero__texte p:last-child { display: block; }
-  .hero__preuve + p { margin-top: var(--space-3); }
   .form { padding: var(--space-8); }
   .garanties { grid-template-columns: repeat(3, 1fr); }
   .aides, .etapes { grid-template-columns: repeat(2, 1fr); }
   .types { grid-template-columns: repeat(2, 1fr); }
-  .conditions .mbc-liste-coches { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
   .pied__grille { grid-template-columns: 1fr auto; align-items: start; }
 }
 
@@ -259,6 +249,44 @@ legend.form__question { margin-bottom: var(--space-3); }
   .constat { grid-template-columns: 1.5fr 1fr; }
   .aides, .etapes { grid-template-columns: repeat(4, 1fr); }
   .faq { grid-template-columns: 1fr 1.4fr; gap: var(--space-16); align-items: start; }
+}
+
+/* ---------- Bandeau cookies ---------- */
+.cookies { position: fixed; left: var(--space-2); right: var(--space-2); bottom: var(--space-2); z-index: 20; display: grid; gap: var(--space-2); max-width: 760px; margin: 0 auto; padding: var(--space-3); border-radius: var(--radius-lg); background: var(--blanc); color: var(--sapin); box-shadow: var(--ombre-formulaire), 0 0 0 1px var(--ligne); font-size: 14px; line-height: 20px; }
+.cookies[hidden] { display: none; }
+.cookies__boutons { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); }
+.cookies__boutons button { min-height: 44px; padding: 0 var(--space-6); border: 0; border-radius: var(--radius-md); background: var(--sapin); color: var(--lin); font: inherit; font-weight: 700; cursor: pointer; }
+.cookies__boutons button:hover { background: var(--sapin-700); }
+.pied__cookies { background: none; border: 0; padding: 0; font: inherit; color: var(--lin); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.pied__cookies:hover { color: var(--laine); }
+.pied__cookies:focus-visible { outline-color: var(--laine); }
+@media (min-width: 720px) {
+  .cookies { grid-template-columns: 1fr auto; align-items: center; gap: var(--space-6); left: var(--space-4); right: var(--space-4); bottom: var(--space-4); padding: var(--space-4) var(--space-4) var(--space-4) var(--space-6); font-size: 15px; line-height: 22px; }
+}
+
+/* ---------- Mobile : la première question tient en entier sur le premier écran ---------- */
+@media (max-width: 719px) {
+  .entete.conteneur { padding-top: var(--space-3); padding-bottom: var(--space-3); }
+  .entete__logo img { height: 32px; }
+  .hero { padding: var(--space-4) 0 var(--space-6); }
+  .hero__grille { gap: var(--space-4); padding-left: var(--space-3); padding-right: var(--space-3); }
+  .hero__texte { display: contents; }
+  .hero h1 { font-size: 26px; line-height: 30px; margin: 0; }
+  .hero__texte p { order: 2; font-size: 16px; line-height: 24px; }
+  .form { padding: var(--space-4); }
+  .form__progres { margin-bottom: var(--space-4); }
+  .form__pas { gap: var(--space-3); }
+  .form__question { font-size: 22px; line-height: 28px; }
+  legend.form__question { margin-bottom: var(--space-2); }
+  .mbc-options { gap: var(--space-2); }
+  .mbc-option { min-height: 52px; padding-top: var(--space-1); padding-bottom: var(--space-1); }
+  .mbc-option__icone { width: 36px; height: 36px; }
+  .mbc-option__texte { line-height: 20px; }
+  .mbc-option__texte small { font-size: 13px; line-height: 16px; }
+}
+@media (max-width: 719px) and (max-height: 600px) {
+  .hero { padding-top: var(--space-3); }
+  .hero h1 { font-size: 22px; line-height: 26px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
