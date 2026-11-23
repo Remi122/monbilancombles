@@ -26,6 +26,7 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--lin); color: var(--sapin); font-family: var(--font-texte); font-size: 17px; line-height: 27px; -webkit-font-smoothing: antialiased; }
 img, svg { max-width: 100%; }
+img { height: auto; }
 a { color: var(--mousse); text-underline-offset: 3px; }
 a:hover { color: var(--sapin); }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
@@ -158,6 +159,7 @@ legend.form__question { margin-bottom: var(--space-3); }
 .barres li.est-toit i::before { background: var(--laine); box-shadow: inset 0 0 0 1.5px var(--sapin); }
 .carte--sombre { background: var(--sapin); color: var(--lin); box-shadow: var(--ombre-formulaire); overflow: hidden; }
 .carte__photo { display: block; width: calc(100% + 2 * var(--space-6)); max-width: none; height: auto; aspect-ratio: 16 / 10; object-fit: cover; margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) var(--space-6); }
+.carte__photo { aspect-ratio: 3 / 2; }
 .carte--sombre .surtitre { color: var(--laine); }
 .carte--sombre h3 { font-size: 28px; line-height: 34px; letter-spacing: -.01em; margin-bottom: var(--space-4); }
 
@@ -185,8 +187,8 @@ legend.form__question { margin-bottom: var(--space-3); }
 
 /* ---------- Perdus ou aménagés ---------- */
 .types { display: grid; gap: var(--space-4); }
-.type { display: grid; gap: var(--space-4); align-content: start; font-size: 15px; line-height: 23px; }
-.type__photo { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--radius-md); }
+.type { display: grid; gap: var(--space-4); align-content: start; font-size: 15px; line-height: 23px; overflow: hidden; }
+.type__photo { display: block; width: calc(100% + 2 * var(--space-6)); max-width: none; height: auto; aspect-ratio: 3 / 2; object-fit: cover; margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) var(--space-2); }
 
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: var(--space-6); }
