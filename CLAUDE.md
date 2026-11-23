@@ -12,6 +12,7 @@ Site statique, sans étape de build : HTML, CSS et JavaScript écrits à la main
 - `assets/js/config.js` : réglages. `webhookUrl` est l'adresse du webhook Make.
 - `assets/js/form.js` : formulaire en 6 étapes (une question par écran), validation, envoi.
 - `assets/js/cookies.js` : bandeau cookies. Rien ne se charge avant l'accord du visiteur. Google Tag Manager se charge après accord si `gtmId` est renseigné dans `config.js`.
+- `assets/js/anim.js` : apparition des blocs au défilement et remplissage des barres du graphique. Désactivé si le visiteur a demandé moins d'animations.
 - `assets/fonts/` : Fraunces et Instrument Sans, hébergées ici (aucun appel à Google Fonts).
 - `assets/img/` : logo, symbole, favicon, et trois photos d'illustration libres de droits (crédits en bas de page). À remplacer par de vraies photos de chantier dès qu'il y en a.
 
