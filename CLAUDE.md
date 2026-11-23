@@ -19,6 +19,7 @@ Site statique, sans étape de build : HTML, CSS et JavaScript écrits à la main
 
 - Aperçu local : `python3 -m http.server 8000`, puis ouvrir http://localhost:8000
 - Mise en ligne : pousser sur `main`. GitHub Pages republie en une ou deux minutes.
+- Après chaque modification d'un fichier CSS, JS ou d'une image, augmenter son numéro `?v=` dans `index.html`. Sans ça, les visiteurs gardent l'ancien fichier une dizaine de minutes et la page peut s'afficher de travers.
 
 Il n'y a ni dépendance à installer, ni test automatique. Après une modification, vérifier la page à 375px et à 1280px de large, et dérouler le formulaire jusqu'au bout. Sur mobile, la première question doit tenir en entier sur le premier écran, bandeau cookies affiché.
 
