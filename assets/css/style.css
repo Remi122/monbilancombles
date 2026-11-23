@@ -201,7 +201,9 @@ legend.form__question { margin-bottom: var(--space-3); }
 .faq details p { padding: 0 0 var(--space-6); color: var(--sapin-700); max-width: 680px; }
 
 /* ---------- Appel final ---------- */
-.final { background: var(--sapin); color: var(--lin); text-align: center; }
+.final { position: relative; overflow: hidden; background: var(--sapin); color: var(--lin); text-align: center; }
+.final .conteneur { position: relative; }
+.final h2 em { font-style: normal; color: var(--laine); background: none; box-shadow: none; }
 .final h2 { color: var(--lin); margin-left: auto; margin-right: auto; }
 .final h2 { margin-bottom: var(--space-8); }
 .final .mbc-btn:focus-visible { outline-color: var(--laine); }
@@ -293,6 +295,12 @@ legend.form__question { margin-bottom: var(--space-3); }
   .hero { padding-top: var(--space-3); }
   .hero h1 { font-size: 22px; line-height: 26px; }
 }
+
+/* ---------- Animations à l'apparition (activées par anim.js) ---------- */
+.js-anim [data-anim] { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; transition-delay: var(--delai, 0ms); }
+.js-anim [data-anim].est-vu { opacity: 1; transform: none; }
+.js-anim [data-barres] i::before { width: 0; transition: width .8s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--delai, 0ms); }
+.js-anim [data-barres].est-vu i::before { width: var(--part); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
