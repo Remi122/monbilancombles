@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Isolation des combles : à quelles aides 2026 avez-vous droit ?">
-<meta property="og:description" content="Six questions, une minute. On vous dit quelles aides s'appliquent à vos combles. Gratuit et sans engagement.">
+<meta property="og:description" content="Cinq questions, une minute. On vous dit quelles aides s'appliquent à vos combles.">
 <link rel="icon" type="image/svg+xml" href="assets/img/symbole.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/symbole-512.png">
@@ -44,7 +44,6 @@
 
 <header class="conteneur entete">
   <a class="entete__logo" href="./" aria-label="Mon Bilan Combles, accueil"><img src="assets/img/logo.svg" alt="Mon Bilan Combles" width="240" height="44"></a>
-  <span class="mbc-pastille"><svg class="ico"><use href="#i-coche"/></svg>Gratuit et sans engagement</span>
 </header>
 
 <main>
@@ -54,22 +53,19 @@
     <div class="conteneur hero__grille">
       <div class="hero__texte">
         <h1>Isolation des combles&nbsp;: à quelles <em>aides 2026</em> avez-vous droit&nbsp;?</h1>
-        <p class="hero__preuve"><strong>25 à 30&nbsp;% de la chaleur</strong> d'une maison non isolée part par le toit*.</p>
-        <p>MaPrimeRénov' ne finance plus l'isolation seule depuis le 1<sup>er</sup> septembre 2026. Reste à savoir quelles aides s'appliquent encore chez vous. Quelques questions, et vous êtes fixé.</p>
-        <p>Estimation gratuite et sans engagement.</p>
+        <p>MaPrimeRénov' ne finance plus l'isolation seule depuis le 1<sup>er</sup> septembre 2026. Reste à savoir quelles aides s'appliquent encore chez vous.</p>
       </div>
 
       <form class="form" id="bilan" novalidate>
         <div id="form-corps">
           <div class="form__progres">
-            <div class="form__segments" id="form-segments" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="form__segments" id="form-segments" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <span class="form__duree">≈ 1 min</span>
           </div>
-          <p class="visuellement-cache" id="form-etape" aria-live="polite">Étape 1 sur 7</p>
+          <p class="visuellement-cache" id="form-etape" aria-live="polite">Étape 1 sur 6</p>
 
           <fieldset class="form__pas est-actif" data-champ="statut">
             <legend class="form__question">Vous êtes…</legend>
-            <p class="form__pourquoi">Les travaux d'isolation se décident avec le propriétaire, c'est donc la première chose qu'on vérifie.</p>
             <div class="mbc-options">
               <label class="mbc-option"><input type="radio" name="statut" value="Propriétaire"><span class="mbc-option__icone mbc-option__icone--laine"><svg class="ico"><use href="#i-maison"/></svg></span><span class="mbc-option__texte"><b>Propriétaire</b><small>de mon logement</small></span><span class="mbc-option__rond"></span></label>
               <label class="mbc-option"><input type="radio" name="statut" value="Bientôt propriétaire"><span class="mbc-option__icone mbc-option__icone--mousse"><svg class="ico"><use href="#i-cle"/></svg></span><span class="mbc-option__texte"><b>Bientôt propriétaire</b><small>achat en cours</small></span><span class="mbc-option__rond"></span></label>
@@ -88,32 +84,22 @@
 
           <fieldset class="form__pas" data-champ="combles">
             <legend class="form__question">Vos combles aujourd'hui</legend>
-            <p class="form__pourquoi">La technique d'isolation et l'épaisseur demandée pour les aides ne sont pas les mêmes.</p>
+            <p class="form__pourquoi">L'isolation ne se fait pas de la même façon dans les deux cas.</p>
             <div class="mbc-options">
-              <label class="mbc-option"><input type="radio" name="combles" value="Perdus"><span class="mbc-option__icone mbc-option__icone--laine"><svg class="ico"><use href="#i-perdus"/></svg></span><span class="mbc-option__texte"><b>Perdus</b><small>on n'y vit pas, accès par une trappe</small></span><span class="mbc-option__rond"></span></label>
-              <label class="mbc-option"><input type="radio" name="combles" value="Aménagés"><span class="mbc-option__icone mbc-option__icone--mousse"><svg class="ico"><use href="#i-amenages"/></svg></span><span class="mbc-option__texte"><b>Aménagés</b><small>une pièce sous la pente du toit</small></span><span class="mbc-option__rond"></span></label>
+              <label class="mbc-option"><input type="radio" name="combles" value="Perdus"><span class="mbc-option__icone mbc-option__icone--laine"><svg class="ico"><use href="#i-perdus"/></svg></span><span class="mbc-option__texte"><b>Perdus</b><small>un espace vide sous le toit</small></span><span class="mbc-option__rond"></span></label>
+              <label class="mbc-option"><input type="radio" name="combles" value="Aménagés"><span class="mbc-option__icone mbc-option__icone--mousse"><svg class="ico"><use href="#i-amenages"/></svg></span><span class="mbc-option__texte"><b>Aménagés</b><small>une pièce habitable sous le toit</small></span><span class="mbc-option__rond"></span></label>
               <label class="mbc-option"><input type="radio" name="combles" value="Ne sait pas"><span class="mbc-option__icone mbc-option__icone--lin"><svg class="ico"><use href="#i-question"/></svg></span><span class="mbc-option__texte"><b>Je ne sais pas</b></span><span class="mbc-option__rond"></span></label>
             </div>
           </fieldset>
 
           <fieldset class="form__pas" data-champ="annee">
             <legend class="form__question">Quand votre logement a-t-il été construit&nbsp;?</legend>
-            <p class="form__pourquoi">Les aides concernent les logements de plus de 2 ans. Une estimation suffit.</p>
+            <p class="form__pourquoi">Certaines aides ne concernent pas les logements récents. Une estimation suffit.</p>
             <div class="mbc-options">
               <label class="mbc-option"><input type="radio" name="annee" value="Avant 1975"><span class="mbc-option__texte"><b>Avant 1975</b></span><span class="mbc-option__rond"></span></label>
               <label class="mbc-option"><input type="radio" name="annee" value="1975 à 2000"><span class="mbc-option__texte"><b>Entre 1975 et 2000</b></span><span class="mbc-option__rond"></span></label>
               <label class="mbc-option"><input type="radio" name="annee" value="Après 2000"><span class="mbc-option__texte"><b>Après 2000</b></span><span class="mbc-option__rond"></span></label>
               <label class="mbc-option"><input type="radio" name="annee" value="Moins de 2 ans"><span class="mbc-option__texte"><b>Il y a moins de 2 ans</b></span><span class="mbc-option__rond"></span></label>
-            </div>
-          </fieldset>
-
-          <fieldset class="form__pas" data-champ="delai">
-            <legend class="form__question">Quand aimeriez-vous vous lancer&nbsp;?</legend>
-            <div class="mbc-options">
-              <label class="mbc-option"><input type="radio" name="delai" value="Dès que possible"><span class="mbc-option__texte"><b>Dès que possible</b></span><span class="mbc-option__rond"></span></label>
-              <label class="mbc-option"><input type="radio" name="delai" value="Dans les 3 mois"><span class="mbc-option__texte"><b>Dans les 3 prochains mois</b></span><span class="mbc-option__rond"></span></label>
-              <label class="mbc-option"><input type="radio" name="delai" value="D'ici un an"><span class="mbc-option__texte"><b>D'ici un an</b></span><span class="mbc-option__rond"></span></label>
-              <label class="mbc-option"><input type="radio" name="delai" value="Se renseigne"><span class="mbc-option__texte"><b>Je me renseigne pour l'instant</b></span><span class="mbc-option__rond"></span></label>
             </div>
           </fieldset>
 
@@ -130,7 +116,7 @@
 
           <div class="form__pas">
             <p class="form__question">Où envoyer votre bilan&nbsp;?</p>
-            <p class="form__pourquoi">On vous téléphone quelques minutes pour vérifier vos réponses, puis le bilan arrive par e-mail.</p>
+            <p class="form__pourquoi">Le téléphone sert à vérifier vos réponses avec vous, l'e-mail à envoyer le bilan.</p>
             <div class="mbc-champ" data-champ="nom">
               <label class="mbc-champ__label" for="nom">Prénom et nom</label>
               <input class="mbc-champ__input" id="nom" name="nom" type="text" autocomplete="name">
@@ -161,7 +147,7 @@
         <div class="form__merci" id="form-merci" tabindex="-1">
           <svg class="ico"><use href="#i-coche"/></svg>
           <h2>Votre demande est bien partie</h2>
-          <p>On vous téléphone pour vérifier vos réponses, puis votre bilan arrive par e-mail. Vous n'avez rien d'autre à faire.</p>
+          <p>Prochaine étape : notre appel. D'ici là, vous n'avez rien à faire.</p>
         </div>
       </form>
     </div>
@@ -172,7 +158,7 @@
     <ul class="garanties">
       <li><span class="garanties__icone garanties__icone--laine"><svg class="ico"><use href="#i-bouclier"/></svg></span><span><b>Artisans certifiés RGE</b><small>obligatoire pour toucher les aides</small></span></li>
       <li><span class="garanties__icone garanties__icone--mousse"><svg class="ico"><use href="#i-courriel"/></svg></span><span><b>Votre bilan par e-mail</b><small>avant tout déplacement</small></span></li>
-      <li><span class="garanties__icone garanties__icone--lin"><svg class="ico"><use href="#i-euro"/></svg></span><span><b>Gratuit pour vous</b><small>aucun paiement, à aucun moment</small></span></li>
+      <li><span class="garanties__icone garanties__icone--lin"><svg class="ico"><use href="#i-euro"/></svg></span><span><b>Gratuit pour vous</b><small>le service est financé par les artisans</small></span></li>
     </ul>
   </div>
 
@@ -192,15 +178,15 @@
             <li style="--part: 33%"><b>Planchers bas</b><span>7 à 10&nbsp;%</span><i></i></li>
             <li style="--part: 33%"><b>Ponts thermiques</b><span>5 à 10&nbsp;%</span><i></i></li>
           </ul>
-          <p class="note">* Pertes de chaleur d'une maison construite avant 1974 et non isolée. Source : ADEME, infographie <a href="https://librairie.ademe.fr/ged/979/infographie-pourquoi-comment-isoler-logement-202212.pdf" rel="noopener">« Pourquoi et comment isoler son logement »</a>. Votre maison peut être mieux ou moins bien isolée : c'est ce que le bilan vérifie.</p>
+          <p class="note">Source : ADEME, infographie <a href="https://librairie.ademe.fr/ged/979/infographie-pourquoi-comment-isoler-logement-202212.pdf" rel="noopener">« Pourquoi et comment isoler son logement »</a>. Votre maison peut être mieux ou moins bien isolée.</p>
         </div>
         <div class="carte carte--sombre">
           <p class="surtitre">Avec Mon Bilan Combles</p>
           <h3>Un état des lieux avant de parler travaux</h3>
-          <p>Type de combles, isolant déjà en place, aides applicables : vous savez où vous en êtes avant de voir un devis.</p>
+          <p>Type de combles, isolant déjà en place : vous savez où vous en êtes avant de voir un devis.</p>
         </div>
       </div>
-      <p class="appel"><a class="mbc-btn" href="#bilan">Vérifier mes aides</a><span>Une minute, sans engagement</span></p>
+      <p class="appel"><a class="mbc-btn" href="#bilan">Vérifier mes aides</a></p>
     </div>
   </section>
 
@@ -208,23 +194,15 @@
   <section class="section section--blanc" id="aides">
     <div class="conteneur">
       <h2 class="titre-1">Ce que l'État prévoit <em>encore</em> pour isoler vos combles en 2026</h2>
-      <p class="intro">Depuis le 1<sup>er</sup> septembre 2026, MaPrimeRénov' ne finance plus l'isolation des combles réalisée seule. Quatre dispositifs restent en vigueur. Le bilan vous dit lesquels s'appliquent chez vous.</p>
+      <p class="intro">Quatre dispositifs restent en vigueur, chacun avec ses conditions.</p>
       <ul class="aides">
         <li class="aide aide--laine"><span class="aide__icone"><svg class="ico"><use href="#i-euro"/></svg></span><p class="aide__chiffre">Prime CEE</p><p class="aide__nom">La prime énergie</p><p>Versée par les fournisseurs d'énergie, pour remplir une obligation fixée par l'État. Sans condition de ressources. Chaque fournisseur fixe son montant, souvent plus élevé pour les revenus modestes.</p></li>
         <li class="aide aide--mousse"><span class="aide__icone"><svg class="ico"><use href="#i-document"/></svg></span><p class="aide__chiffre">5,5&nbsp;%</p><p class="aide__nom">TVA réduite</p><p>Au lieu de 20&nbsp;%, sur la fourniture et la pose de l'isolant, dans un logement achevé depuis plus de 2 ans.</p></li>
-        <li class="aide aide--lin"><span class="aide__icone"><svg class="ico"><use href="#i-calendrier"/></svg></span><p class="aide__chiffre">15&nbsp;000&nbsp;€</p><p class="aide__nom">Éco-prêt à taux zéro</p><p>Le maximum que vous pouvez emprunter sans intérêts pour isoler votre toiture, sans condition de ressources. Remboursement sur 15 ans au plus.</p></li>
+        <li class="aide aide--lin"><span class="aide__icone"><svg class="ico"><use href="#i-calendrier"/></svg></span><p class="aide__chiffre">15&nbsp;000&nbsp;€</p><p class="aide__nom">Éco-prêt à taux zéro</p><p>Le maximum que vous pouvez emprunter sans intérêts pour isoler votre toiture, quels que soient vos revenus. Remboursement sur 15 ans au plus.</p></li>
         <li class="aide aide--sapin"><span class="aide__icone"><svg class="ico"><use href="#i-maison"/></svg></span><p class="aide__chiffre">2 classes</p><p class="aide__nom">MaPrimeRénov' rénovation d'ampleur</p><p>Encore possible si les combles font partie d'un projet global : logement classé E, F ou G, au moins 2 classes énergétiques gagnées, accompagnateur agréé obligatoire.</p></li>
       </ul>
-      <div class="conditions">
-        <p class="conditions__titre">Trois conditions reviennent presque partout</p>
-        <ul class="mbc-liste-coches">
-          <li><svg class="ico"><use href="#i-coche"/></svg><span><b>Un artisan certifié RGE.</b> Sans lui, ni prime CEE ni éco-prêt à taux zéro.</span></li>
-          <li><svg class="ico"><use href="#i-coche"/></svg><span><b>Assez d'isolant.</b> Une résistance thermique d'au moins 7&nbsp;m².K/W en combles perdus, 6 sous les rampants.</span></li>
-          <li><svg class="ico"><use href="#i-coche"/></svg><span><b>La prime CEE avant le devis.</b> Elle se demande avant de signer. Après, elle est perdue.</span></li>
-        </ul>
-      </div>
-      <p class="note">Informations vérifiées le 23 novembre 2026. Sources : Service-Public.fr (<a href="https://www.service-public.gouv.fr/particuliers/actualites/A18332" rel="noopener">MaPrimeRénov', travaux exclus au 1<sup>er</sup> septembre 2026</a>, <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F35584" rel="noopener">certificats d'économies d'énergie</a>, <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F19905" rel="noopener">éco-prêt à taux zéro</a>), <a href="https://france-renov.gouv.fr/aides/maprimerenov-renovation-ampleur" rel="noopener">France Rénov'</a>, article 278-0 bis A du code général des impôts pour la TVA. Des aides locales peuvent s'ajouter selon votre commune. Mon Bilan Combles est un service privé : les règles officielles et à jour sont celles de France Rénov'.</p>
-      <p class="appel"><a class="mbc-btn" href="#bilan">Vérifier mes aides</a><span>Voir lesquelles s'appliquent chez vous</span></p>
+      <p class="note">Informations vérifiées le 23 novembre 2026. Sources : Service-Public.fr (<a href="https://www.service-public.gouv.fr/particuliers/actualites/A18332" rel="noopener">MaPrimeRénov', travaux exclus au 1<sup>er</sup> septembre 2026</a>, <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F35584" rel="noopener">certificats d'économies d'énergie</a>, <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F19905" rel="noopener">éco-prêt à taux zéro</a>), <a href="https://france-renov.gouv.fr/aides/maprimerenov-renovation-ampleur" rel="noopener">France Rénov'</a>, article 278-0 bis A du code général des impôts pour la TVA. Des aides locales peuvent s'ajouter selon votre commune. Les règles officielles et à jour sont celles de France Rénov'.</p>
+      <p class="appel"><a class="mbc-btn" href="#bilan">Vérifier mes aides</a></p>
     </div>
   </section>
 
@@ -232,14 +210,14 @@
   <section class="section section--mousse">
     <div class="conteneur">
       <h2 class="titre-1">On commence par <em>vérifier vos aides</em></h2>
-      <p class="intro">Beaucoup d'entreprises cherchent d'abord à décrocher un rendez-vous. Ici, le bilan arrive par e-mail et vous le lisez chez vous, avant tout déplacement.</p>
+      <p class="intro">Du formulaire à la pose, voici l'ordre des choses.</p>
       <ol class="etapes">
-        <li><svg class="ico"><use href="#i-document"/></svg><h3 class="titre-3">Vous répondez à 6 questions</h3><p>Votre logement, vos combles, votre code postal. Ça prend une minute.</p></li>
-        <li><svg class="ico"><use href="#i-telephone"/></svg><h3 class="titre-3">On vous téléphone avant de chiffrer</h3><p>Quelques minutes pour vérifier le type de combles et l'isolant déjà en place, histoire de ne pas vous envoyer un chiffre au hasard.</p></li>
-        <li class="est-cle"><svg class="ico"><use href="#i-courriel"/></svg><h3 class="titre-3">Vous recevez votre bilan par e-mail</h3><p>Les aides applicables, une estimation des travaux et de ce qui reste à votre charge. Vous le lisez tranquillement, chez vous.</p></li>
-        <li><svg class="ico"><use href="#i-maison"/></svg><h3 class="titre-3">Un artisan RGE passe si le bilan vous convient</h3><p>Visite technique, devis, puis pose. La prime CEE est demandée avant la signature du devis.</p></li>
+        <li><svg class="ico"><use href="#i-document"/></svg><h3 class="titre-3">Vous répondez à 5 questions</h3><p>Votre logement, vos combles, votre code postal.</p></li>
+        <li><svg class="ico"><use href="#i-telephone"/></svg><h3 class="titre-3">On vous téléphone avant de chiffrer</h3><p>Quelques minutes, histoire de ne pas vous envoyer un chiffre au hasard.</p></li>
+        <li class="est-cle"><svg class="ico"><use href="#i-courriel"/></svg><h3 class="titre-3">Vous recevez votre bilan par e-mail</h3><p>Les aides applicables, une estimation des travaux et de ce qui reste à votre charge.</p></li>
+        <li><svg class="ico"><use href="#i-maison"/></svg><h3 class="titre-3">Un artisan passe si le bilan vous convient</h3><p>Visite technique, devis, puis pose. La prime CEE est demandée avant la signature du devis.</p></li>
       </ol>
-      <p class="appel"><a class="mbc-btn" href="#bilan">Vérifier mes aides</a><span>Une minute, sans engagement</span></p>
+      <p class="appel"><a class="mbc-btn" href="#bilan">Vérifier mes aides</a></p>
     </div>
   </section>
 
@@ -247,12 +225,12 @@
   <section class="section">
     <div class="conteneur">
       <h2 class="titre-1">Perdus ou aménagés&nbsp;: <em>deux cas, deux chantiers</em></h2>
-      <p class="intro">La première question du bilan, c'est celle-ci. Elle décide de la technique, du prix et de l'épaisseur d'isolant demandée pour les aides.</p>
+      <p class="intro">Vous hésitez entre les deux ? Voici comment les reconnaître.</p>
       <div class="types">
         <article class="carte type">
           <svg class="type__schema" viewBox="0 0 240 150" aria-hidden="true"><path class="s-isolant" d="M38 92h164v12H38z"/><path class="s-trait" d="M20 92L120 22l100 70"/><path class="s-trait" d="M38 92v46h164V92"/><path class="s-fin" d="M38 104h164"/></svg>
           <h3 class="titre-3">Combles perdus</h3>
-          <p>L'espace vide sous le toit, où l'on ne vit pas. On y accède souvent par une trappe.</p>
+          <p>On n'y vit pas, et on y accède le plus souvent par une trappe.</p>
           <ul class="mbc-liste-coches">
             <li><svg class="ico"><use href="#i-coche"/></svg><span>L'isolant est soufflé ou déroulé sur le plancher.</span></li>
             <li><svg class="ico"><use href="#i-coche"/></svg><span>Le chantier se fait sans toucher aux pièces de vie.</span></li>
@@ -270,7 +248,7 @@
           </ul>
         </article>
       </div>
-      <p class="appel"><a class="mbc-btn" href="#bilan">Vérifier mes aides</a><span>Vos combles, votre logement, vos aides</span></p>
+      <p class="appel"><a class="mbc-btn" href="#bilan">Vérifier mes aides</a></p>
     </div>
   </section>
 
@@ -280,28 +258,12 @@
       <h2 class="titre-1">Ce qu'on nous demande le plus souvent</h2>
       <div class="faq__liste">
         <details>
-          <summary>MaPrimeRénov' finance-t-elle encore l'isolation des combles&nbsp;?</summary>
-          <p>Plus toute seule. Depuis le 1<sup>er</sup> septembre 2026, l'isolation est sortie du « parcours par geste ». MaPrimeRénov' reste possible dans une rénovation d'ampleur, qui regroupe plusieurs travaux sur un logement classé E, F ou G.</p>
-        </details>
-        <details>
-          <summary>La prime CEE, c'est quoi exactement&nbsp;?</summary>
-          <p>L'État oblige les fournisseurs d'énergie à financer des économies d'énergie chez les particuliers. Ils le font en versant une prime, qu'on appelle prime CEE ou prime énergie. Elle est ouverte à tous les revenus et son montant varie d'un fournisseur à l'autre.</p>
-        </details>
-        <details>
           <summary>L'isolation à 1 euro existe-t-elle encore&nbsp;?</summary>
           <p>Non. Ces offres ont disparu en 2021. Si quelqu'un vous en propose une par téléphone, raccrochez : le démarchage téléphonique pour la rénovation énergétique est interdit.</p>
         </details>
         <details>
-          <summary>Pourquoi faut-il un artisan RGE&nbsp;?</summary>
-          <p>Parce que la prime CEE et l'éco-prêt à taux zéro ne sont accordés que si les travaux sont réalisés par une entreprise reconnue garant de l'environnement (RGE). Nos artisans partenaires le sont tous.</p>
-        </details>
-        <details>
           <summary>Le bilan m'engage-t-il à quelque chose&nbsp;?</summary>
-          <p>Non. Vous recevez les aides applicables et une estimation. Vous restez libre de donner suite, de comparer avec d'autres devis ou de ne rien faire.</p>
-        </details>
-        <details>
-          <summary>Combien coûte le bilan&nbsp;?</summary>
-          <p>Rien. Mon Bilan Combles ne vous demande aucun paiement. Le service est financé par les artisans partenaires.</p>
+          <p>Non. Vous restez libre de donner suite, de comparer avec d'autres devis ou de ne rien faire.</p>
         </details>
         <details>
           <summary>Je suis locataire. Je peux faire la demande&nbsp;?</summary>
@@ -318,8 +280,7 @@
   <!-- Appel final -->
   <section class="section final">
     <div class="conteneur">
-      <h2 class="titre-1">Les aides qui s'appliquent à vos combles&nbsp;?</h2>
-      <p>Six questions, une minute. On vous dit ce qui s'applique chez vous.</p>
+      <h2 class="titre-1">Prêt à faire le point sur vos combles&nbsp;?</h2>
       <a class="mbc-btn" href="#bilan">Vérifier mes aides <svg class="ico"><use href="#i-fleche"/></svg></a>
     </div>
   </section>
@@ -339,6 +300,7 @@
 </footer>
 
 <script src="assets/js/config.js"></script>
+<script src="assets/js/cookies.js"></script>
 <script src="assets/js/form.js"></script>
 </body>
 </html>

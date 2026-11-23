@@ -10,7 +10,8 @@ Site statique, sans étape de build : HTML, CSS et JavaScript écrits à la main
 - `mentions-legales.html`, `confidentialite.html` : pages légales. Les passages entre `<mark>` restent à compléter.
 - `assets/css/style.css` : tous les styles. Les tokens du design system sont recopiés dans le bloc `:root` en haut du fichier.
 - `assets/js/config.js` : réglages. `webhookUrl` est l'adresse du webhook Make.
-- `assets/js/form.js` : formulaire en 7 étapes (une question par écran), validation, envoi.
+- `assets/js/form.js` : formulaire en 6 étapes (une question par écran), validation, envoi.
+- `assets/js/cookies.js` : bandeau cookies. Rien ne se charge avant l'accord du visiteur. Google Tag Manager se charge après accord si `gtmId` est renseigné dans `config.js`.
 - `assets/fonts/` : Fraunces et Instrument Sans, hébergées ici (aucun appel à Google Fonts).
 - `assets/img/` : logo, symbole, favicon.
 
@@ -19,7 +20,7 @@ Site statique, sans étape de build : HTML, CSS et JavaScript écrits à la main
 - Aperçu local : `python3 -m http.server 8000`, puis ouvrir http://localhost:8000
 - Mise en ligne : pousser sur `main`. GitHub Pages republie en une ou deux minutes.
 
-Il n'y a ni dépendance à installer, ni test automatique. Après une modification, vérifier la page à 375px et à 1280px de large, et dérouler le formulaire jusqu'au bout.
+Il n'y a ni dépendance à installer, ni test automatique. Après une modification, vérifier la page à 375px et à 1280px de large, et dérouler le formulaire jusqu'au bout. Sur mobile, la première question doit tenir en entier sur le premier écran, bandeau cookies affiché.
 
 ## Design system
 
@@ -36,13 +37,14 @@ Source de vérité : https://claude.ai/artifact/DaAmqyBUVqmgS8e9VT1SoQ (lire son
 ## Rédaction
 
 - Vouvoiement, phrases courtes, mots de tous les jours.
-- Boutons à la première personne : « Obtenir mon bilan gratuit ».
+- Boutons à la première personne : « Vérifier mes aides ».
 - Aucun chiffre sans source, aucune note ni avis inventés, aucune urgence fabriquée.
+- Ne jamais dire deux fois la même chose sur la page : chaque information a une seule place.
 - Ne jamais écrire « isolation à 1 euro » ni « offre de l'État ».
 
 ## Formulaire
 
-- Champs envoyés au webhook : `statut`, `logement`, `combles`, `annee`, `delai`, `code_postal`, `nom`, `telephone`, `email`, `consentement`, `date`, `page`, plus `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `gclid`, `fbclid` quand ils sont dans l'adresse.
+- Champs envoyés au webhook : `statut`, `logement`, `combles`, `annee`, `code_postal`, `nom`, `telephone`, `email`, `consentement`, `date`, `page`, plus `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `gclid`, `fbclid` quand ils sont dans l'adresse.
 - L'envoi se fait en champs de formulaire classiques (`application/x-www-form-urlencoded`), pas en JSON, pour éviter les blocages entre domaines.
 - Le champ caché `site_web` est un piège à robots : s'il est rempli, rien n'est envoyé.
 - Un clic sur une réponse passe à la question suivante. Au clavier, les flèches choisissent et Entrée valide.
