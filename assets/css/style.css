@@ -156,7 +156,8 @@ legend.form__question { margin-bottom: var(--space-3); }
 .barres i { grid-column: 1 / -1; height: 12px; border-radius: var(--radius-pill); background: var(--lin-fonce); overflow: hidden; }
 .barres i::before { content: ""; display: block; height: 100%; width: var(--part); border-radius: var(--radius-pill); background: var(--mousse); }
 .barres li.est-toit i::before { background: var(--laine); box-shadow: inset 0 0 0 1.5px var(--sapin); }
-.carte--sombre { background: var(--sapin); color: var(--lin); box-shadow: var(--ombre-formulaire); }
+.carte--sombre { background: var(--sapin); color: var(--lin); box-shadow: var(--ombre-formulaire); overflow: hidden; }
+.carte__photo { display: block; width: calc(100% + 2 * var(--space-6)); max-width: none; height: auto; aspect-ratio: 16 / 10; object-fit: cover; margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) var(--space-6); }
 .carte--sombre .surtitre { color: var(--laine); }
 .carte--sombre h3 { font-size: 28px; line-height: 34px; letter-spacing: -.01em; margin-bottom: var(--space-4); }
 
@@ -185,10 +186,7 @@ legend.form__question { margin-bottom: var(--space-3); }
 /* ---------- Perdus ou aménagés ---------- */
 .types { display: grid; gap: var(--space-4); }
 .type { display: grid; gap: var(--space-4); align-content: start; font-size: 15px; line-height: 23px; }
-.type__schema { width: 100%; max-width: 280px; height: auto; padding: var(--space-4); border-radius: var(--radius-md); background: var(--lin); }
-.s-trait { fill: none; stroke: var(--sapin); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
-.s-fin { fill: none; stroke: var(--sapin); stroke-width: 2.5; stroke-linejoin: round; }
-.s-isolant { fill: var(--laine); stroke: var(--sapin); stroke-width: 1.5; stroke-linejoin: round; }
+.type__photo { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--radius-md); }
 
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: var(--space-6); }
@@ -215,6 +213,9 @@ legend.form__question { margin-bottom: var(--space-3); }
 .pied a:focus-visible { outline-color: var(--laine); }
 .pied nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
 .pied__mention { max-width: 560px; margin-top: var(--space-4); }
+.pied__sources { margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--sapin-700); font-size: 13px; line-height: 20px; color: var(--mousse-pale); }
+.pied__sources p { max-width: 960px; }
+.pied__sources p + p { margin-top: var(--space-3); }
 
 /* ---------- Pages légales ---------- */
 .legal { max-width: 760px; padding-top: var(--space-8); padding-bottom: var(--space-16); }
