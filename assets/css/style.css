@@ -249,7 +249,9 @@ legend.form__question { margin-bottom: var(--space-3); }
   .hero__grille { grid-template-columns: 1fr 460px; gap: var(--space-16); align-items: center; padding-left: var(--space-12); padding-right: var(--space-12); }
   .hero h1 { font-size: 56px; line-height: 60px; letter-spacing: -.015em; margin-bottom: var(--space-6); }
   .hero__texte p { font-size: 20px; line-height: 30px; }
-  .constat { grid-template-columns: 1.5fr 1fr; }
+  .constat { grid-template-columns: 1.5fr 1fr; align-items: stretch; }
+  .constat .carte--sombre { display: flex; flex-direction: column; }
+  .constat .carte__photo { flex: 1 1 0; min-height: 200px; aspect-ratio: auto; }
   .aides, .etapes { grid-template-columns: repeat(4, 1fr); }
   .faq { grid-template-columns: 1fr 1.4fr; gap: var(--space-16); align-items: start; }
 }
