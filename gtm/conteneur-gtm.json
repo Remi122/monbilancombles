@@ -11,7 +11,7 @@
       "accountId": "0",
       "containerId": "0",
       "name": "mon-bilan-combles.fr",
-      "publicId": "GTM-XXXXXXX",
+      "publicId": "GTM-T5GX59MS",
       "usageContext": [
         "WEB"
       ]
@@ -498,7 +498,7 @@
           {
             "type": "TEMPLATE",
             "key": "value",
-            "value": "G-XXXXXXXXXX"
+            "value": "G-86R1R63SX0"
           }
         ]
       },

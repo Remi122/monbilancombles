@@ -5,5 +5,5 @@ window.MBC_CONFIG = {
   webhookUrl: "https://hook.eu1.make.com/zirkjiq42fc2oxgp8ua85ec7ydjqsnji",
   // Identifiant Google Tag Manager, par exemple "GTM-XXXXXXX".
   // Il ne se charge qu'après un clic sur « Accepter » dans le bandeau cookies. Vide : aucun outil de mesure.
-  gtmId: ""
+  gtmId: "GTM-T5GX59MS"
 };
