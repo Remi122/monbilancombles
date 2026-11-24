@@ -57,6 +57,7 @@ sup { font-size: .65em; line-height: 0; }
 .mbc-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 56px; padding: 0 var(--space-6); border: 0; border-radius: var(--radius-md); background: var(--laine-foncee); color: var(--blanc); font-family: var(--font-texte); font-size: 17px; line-height: 24px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background-color .15s ease; }
 .mbc-btn:hover { background: var(--laine-sombre); color: var(--blanc); }
 .mbc-btn--bloc { display: flex; width: 100%; }
+.mbc-btn--compact { min-height: 44px; padding: 0 var(--space-4); font-size: 15px; line-height: 20px; }
 .mbc-btn--secondaire { background: transparent; color: var(--sapin); box-shadow: inset 0 0 0 2px var(--sapin); }
 .mbc-btn--secondaire:hover { background: var(--sapin); color: var(--lin); }
 .mbc-btn[disabled] { background: var(--ligne); color: var(--sapin-700); cursor: wait; }
@@ -102,7 +103,7 @@ sup { font-size: .65em; line-height: 0; }
 .mbc-liste-coches .ico { width: 22px; height: 22px; margin-top: 3px; color: var(--mousse); stroke-width: 2.5; }
 
 /* ---------- En-tête ---------- */
-.entete.conteneur { display: flex; align-items: center; padding-top: var(--space-6); padding-bottom: var(--space-6); }
+.entete.conteneur { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding-top: var(--space-6); padding-bottom: var(--space-6); }
 .entete__logo img { display: block; height: 36px; width: auto; }
 
 /* ---------- Accroche ---------- */
@@ -278,6 +279,7 @@ legend.form__question { margin-bottom: var(--space-3); }
 @media (max-width: 719px) {
   .entete.conteneur { padding-top: var(--space-3); padding-bottom: var(--space-3); }
   .entete__logo img { height: 32px; }
+  .entete__appel { display: none; }
   .hero { padding: var(--space-4) 0 var(--space-6); }
   .hero__grille { gap: var(--space-4); padding-left: var(--space-3); padding-right: var(--space-3); }
   .hero__texte { display: contents; }
