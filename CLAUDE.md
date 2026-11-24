@@ -69,4 +69,4 @@ Source de vérité : https://claude.ai/artifact/DaAmqyBUVqmgS8e9VT1SoQ (lire son
 - Compléter les deux pages légales et les faire relire.
 - Vérifier que chaque promesse de la page est tenue : gratuité, artisans tous RGE, appel puis bilan par e-mail avant tout déplacement, usage des coordonnées.
 - Retirer `<meta name="robots" content="noindex">` des trois pages.
-- Brancher le nom de domaine monbilancombles.fr dans les réglages GitHub Pages.
+- Nom de domaine : mon-bilan-combles.fr (DNS chez OVH, branché dans les réglages GitHub Pages le 24 novembre 2026). Le fichier `CNAME` à la racine doit rester, sinon le domaine décroche. Une fois le certificat créé par GitHub, cocher « Enforce HTTPS ».
