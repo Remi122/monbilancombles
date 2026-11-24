@@ -7,7 +7,7 @@ Site statique, sans étape de build : HTML, CSS et JavaScript écrits à la main
 ## Fichiers
 
 - `index.html` : la landing (accroche et formulaire, garanties, constat, aides 2026, déroulé, combles perdus ou aménagés, FAQ, appel final). Les icônes sont dans un bloc `<symbol>` en haut du fichier et s'appellent avec `<use href="#i-nom">`.
-- `mentions-legales.html`, `confidentialite.html` : pages légales. Les passages entre `<mark>` restent à compléter.
+- `mentions-legales.html`, `confidentialite.html` : pages légales, complètes. La politique de confidentialité nomme les outils utilisés (Make, Google Sheets, Google Tag Manager, Google Analytics 4, Google Ads, GitHub) et dit qu'une demande peut partir chez plusieurs artisans. Tout nouvel outil (Meta par exemple) ou tout changement dans la transmission des demandes doit y être ajouté, ainsi que dans la case de consentement du formulaire.
 - `assets/css/style.css` : tous les styles. Les tokens du design system sont recopiés dans le bloc `:root` en haut du fichier.
 - `assets/js/config.js` : réglages. `webhookUrl` est l'adresse du webhook Make.
 - `assets/js/form.js` : formulaire en 6 étapes (une question par écran), validation, envoi.
@@ -66,7 +66,7 @@ Source de vérité : https://claude.ai/artifact/DaAmqyBUVqmgS8e9VT1SoQ (lire son
 ## Avant le lancement
 
 - Renseigner `webhookUrl` dans `assets/js/config.js` et envoyer une demande de test.
-- Compléter les deux pages légales et les faire relire.
+- Faire relire les deux pages légales par un juriste, y compris les obligations des plateformes de mise en relation (article L111-7 du code de la consommation).
 - Vérifier que chaque promesse de la page est tenue : gratuité, artisans tous RGE, appel puis bilan par e-mail avant tout déplacement, usage des coordonnées.
 - Retirer `<meta name="robots" content="noindex">` des trois pages.
 - Nom de domaine : mon-bilan-combles.fr (DNS chez OVH, branché dans les réglages GitHub Pages le 24 novembre 2026). Le fichier `CNAME` à la racine doit rester, sinon le domaine décroche. Une fois le certificat créé par GitHub, cocher « Enforce HTTPS ».
