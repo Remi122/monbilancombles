@@ -66,8 +66,38 @@
     if (cible) cible.focus({ preventScroll: true });
   }
 
+  /* Mesure : chaque étape franchie et chaque demande envoyée partent dans le dataLayer, sans aucune
+     coordonnée. Google Tag Manager ne les lit qu'après un clic sur « Accepter » dans le bandeau cookies. */
+  window.dataLayer = window.dataLayer || [];
+  var mesurees = {};
+
+  function mesurer(evenement, details) {
+    var d = { event: evenement };
+    for (var cle in details) d[cle] = details[cle];
+    window.dataLayer.push(d);
+  }
+
+  function departement() {
+    var cp = form.code_postal.value.trim();
+    if (!/^\d{5}$/.test(cp)) return '';
+    return cp.slice(0, 2) === '97' ? cp.slice(0, 3) : cp.slice(0, 2);
+  }
+
+  function mesurerPas(index) {
+    if (mesurees[index]) return;
+    mesurees[index] = true;
+    if (index === 0) mesurer('formulaire_debut', {});
+    var bloc = pas[index];
+    var nom = bloc.getAttribute('data-champ') || bloc.querySelector('[data-champ]').getAttribute('data-champ');
+    var reponse = choix.indexOf(nom) > -1 ? valeur(nom) : (nom === 'code_postal' ? departement() : '');
+    mesurer('formulaire_etape', { etape_numero: index + 1, etape_nom: nom, reponse: reponse });
+  }
+
   function suivant() {
-    if (courant < pas.length - 1 && validerPas(courant)) afficher(courant + 1);
+    if (courant < pas.length - 1 && validerPas(courant)) {
+      mesurerPas(courant);
+      afficher(courant + 1);
+    }
   }
 
   /* Un clic sur une réponse passe à la question suivante. Au clavier, les flèches
@@ -144,11 +174,13 @@
 
     boutonEnvoi.disabled = true;
     envoyer(config.webhookUrl, donnees()).then(function () {
+      mesurer('generate_lead', { statut: valeur('statut'), logement: valeur('logement'), combles: valeur('combles'), annee: valeur('annee'), departement: departement() });
       document.getElementById('form-corps').hidden = true;
       var merci = document.getElementById('form-merci');
       merci.classList.add('est-visible');
       merci.focus();
     }).catch(function () {
+      mesurer('formulaire_erreur', { erreur: 'envoi' });
       boutonEnvoi.disabled = false;
       signalerErreur('L\'envoi n\'a pas fonctionné. Vérifiez votre connexion puis réessayez.');
     });

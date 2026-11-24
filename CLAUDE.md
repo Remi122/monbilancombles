@@ -7,7 +7,7 @@ Site statique, sans étape de build : HTML, CSS et JavaScript écrits à la main
 ## Fichiers
 
 - `index.html` : la landing (accroche et formulaire, garanties, constat, aides 2026, déroulé, combles perdus ou aménagés, FAQ, appel final). Les icônes sont dans un bloc `<symbol>` en haut du fichier et s'appellent avec `<use href="#i-nom">`.
-- `mentions-legales.html`, `confidentialite.html` : pages légales, complètes. La politique de confidentialité nomme les outils utilisés (Make, Google Sheets, Google Tag Manager, Google Analytics 4, Google Ads, GitHub) et dit qu'une demande peut partir chez plusieurs artisans. Tout nouvel outil (Meta par exemple) ou tout changement dans la transmission des demandes doit y être ajouté, ainsi que dans la case de consentement du formulaire.
+- `mentions-legales.html`, `confidentialite.html` : pages légales, complètes. La politique de confidentialité nomme les outils utilisés (Make, Google Sheets, Google Tag Manager, Google Analytics 4, Google Ads, Microsoft Clarity, GitHub) et dit qu'une demande peut partir chez plusieurs artisans. Tout nouvel outil (Meta par exemple) ou tout changement dans la transmission des demandes doit y être ajouté, ainsi que dans la case de consentement du formulaire.
 - `assets/css/style.css` : tous les styles. Les tokens du design system sont recopiés dans le bloc `:root` en haut du fichier.
 - `assets/js/config.js` : réglages. `webhookUrl` est l'adresse du webhook Make.
 - `assets/js/form.js` : formulaire en 6 étapes (une question par écran), validation, envoi.
@@ -54,6 +54,14 @@ Source de vérité : https://claude.ai/artifact/DaAmqyBUVqmgS8e9VT1SoQ (lire son
 - Un clic sur une réponse passe à la question suivante. Au clavier, les flèches choisissent et Entrée valide.
 - Ajouter ou renommer une question : le faire dans `index.html`, dans `choix` ou `regles` et `donnees()` de `form.js`, puis dans le scénario Make. Ajouter aussi un segment `<i>` à la barre de progression.
 - Chaque champ en plus fait perdre des demandes. N'en ajouter que si l'artisan en a vraiment besoin.
+
+## Mesure
+
+- `form.js` pousse dans le `dataLayer` : `formulaire_debut` (première réponse), `formulaire_etape` (`etape_numero`, `etape_nom`, `reponse` ; pour le code postal, seulement le département), `generate_lead` (demande envoyée : `statut`, `logement`, `combles`, `annee`, `departement`), `formulaire_erreur` (`erreur`). Jamais de nom, téléphone ni e-mail : la politique de confidentialité le promet.
+- Les étapes 5 et 6 (code postal, coordonnées) portent `data-clarity-mask="True"` pour que Clarity ne les enregistre jamais.
+- `gtm/conteneur-gtm.json` : conteneur Tag Manager à importer (Admin > Importer un conteneur, fusionner). Il contient la balise Google GA4, les 4 événements GA4, Microsoft Clarity (avec l'accord transmis par `consentv2`) et un événement Clarity à l'envoi. Après import, remplir les variables constantes « ID GA4 » et « ID Clarity », puis publier.
+- Tag Manager ne se charge qu'après « Accepter » dans le bandeau cookies (`cookies.js`), une fois `gtmId` renseigné dans `config.js`. Les événements poussés avant l'accord restent dans le `dataLayer` et sont lus si le visiteur accepte ensuite.
+- Dans GA4 : désactiver « Interactions avec les formulaires » dans la mesure améliorée (doublons), marquer `generate_lead` comme événement clé, créer les dimensions personnalisées des paramètres ci-dessus.
 
 ## Section aides
 
