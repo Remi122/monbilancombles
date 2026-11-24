@@ -114,6 +114,8 @@ sup { font-size: .65em; line-height: 0; }
 .hero h1 em { font-style: normal; color: var(--laine); }
 .hero__texte p { max-width: 520px; font-size: 18px; line-height: 28px; }
 .hero__texte p + p { margin-top: var(--space-3); }
+.hero__texte .hero__chiffre { margin-top: var(--space-6); font-weight: 600; }
+.hero__texte .hero__source { margin-top: var(--space-1); font-size: 14px; line-height: 21px; opacity: .8; }
 
 /* ---------- Formulaire ---------- */
 .form { background: var(--blanc); color: var(--sapin); border-radius: var(--radius-lg); box-shadow: var(--ombre-formulaire); padding: var(--space-6); scroll-margin-top: var(--space-4); }
@@ -282,6 +284,8 @@ legend.form__question { margin-bottom: var(--space-3); }
   .hero__texte { display: contents; }
   .hero h1 { font-size: 26px; line-height: 30px; margin: 0; }
   .hero__texte p { order: 2; font-size: 16px; line-height: 24px; }
+  .hero__texte .hero__chiffre { margin-top: 0; }
+  .hero__texte .hero__source { margin-top: calc(-1 * var(--space-3)); }
   .form { padding: var(--space-4); }
   .form__progres { margin-bottom: var(--space-4); }
   .form__pas { gap: var(--space-3); }
