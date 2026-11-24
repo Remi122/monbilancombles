@@ -14,7 +14,7 @@ Site statique, sans étape de build : HTML, CSS et JavaScript écrits à la main
 - `assets/js/cookies.js` : bandeau cookies. Rien ne se charge avant l'accord du visiteur. Google Tag Manager se charge après accord si `gtmId` est renseigné dans `config.js`.
 - `assets/js/anim.js` : apparition des blocs au défilement et remplissage des barres du graphique. Désactivé si le visiteur a demandé moins d'animations.
 - `assets/fonts/` : Fraunces et Instrument Sans, hébergées ici (aucun appel à Google Fonts).
-- `assets/img/` : logo, symbole, favicon, et trois photos d'illustration libres de droits (crédits en bas de page). À remplacer par de vraies photos de chantier dès qu'il y en a.
+- `assets/img/` : logo, symbole, favicon, et trois photos d'illustration fournies par Rémi, qui en a les droits : `avant-apres.webp` (carte à côté du graphique), `combles-perdus.webp`, `combles-amenages.webp`. À remplacer par de vraies photos de chantier dès qu'il y en a.
 
 ## Commandes
 
@@ -57,7 +57,7 @@ Source de vérité : https://claude.ai/artifact/DaAmqyBUVqmgS8e9VT1SoQ (lire son
 ## Section aides
 
 - La structure de la page reprend celle de mon-bilan-solaire.fr : accroche sur les aides, formulaire à une question par écran, bandes de couleur, bouton « Vérifier mes aides » suivi d'une courte légende.
-- Les sources officielles et les crédits photo sont en bas de page, dans le pied.
+- Les sources officielles sont en bas de page, dans le pied. Si une photo demande un crédit (licence Creative Commons par exemple), il va au même endroit.
 - Les règles citées (fin de MaPrimeRénov' par geste pour l'isolation au 1er septembre 2026, prime CEE, TVA à 5,5 %, éco-prêt à taux zéro de 15 000 €, rénovation d'ampleur) ont été vérifiées le 23 novembre 2026 sur Service-Public.fr et France Rénov'.
 - Les aides changent souvent. Avant chaque campagne, revérifier chaque chiffre sur les pages officielles liées sous la section, puis mettre à jour la date affichée.
 - Ne jamais promettre un montant ni une éligibilité : la page dit ce qui existe, le bilan dit ce qui s'applique.
