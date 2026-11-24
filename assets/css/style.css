@@ -152,11 +152,12 @@ legend.form__question { margin-bottom: var(--space-3); }
 .carte__titre span { font-size: 14px; font-weight: 400; color: var(--sapin-500); }
 .barres { display: grid; gap: var(--space-4); margin: 0; padding: 0; list-style: none; }
 .barres li { display: grid; grid-template-columns: 1fr auto; gap: var(--space-1) var(--space-4); font-size: 15px; line-height: 22px; }
-.barres b { font-weight: 700; }
-.barres span { color: var(--sapin-700); font-variant-numeric: tabular-nums; }
-.barres i { grid-column: 1 / -1; height: 12px; border-radius: var(--radius-pill); background: var(--lin-fonce); overflow: hidden; }
+.barres b { font-weight: 600; }
+.barres span { color: var(--sapin-500); font-weight: 600; font-variant-numeric: tabular-nums; }
+.barres i { grid-column: 1 / -1; height: 10px; border-radius: var(--radius-pill); background: var(--lin); overflow: hidden; }
 .barres i::before { content: ""; display: block; height: 100%; width: var(--part); border-radius: var(--radius-pill); background: var(--mousse); }
-.barres li.est-toit i::before { background: var(--laine); box-shadow: inset 0 0 0 1.5px var(--sapin); }
+.barres li.est-toit span { padding: 0 var(--space-2); border-radius: var(--radius-pill); background: var(--laine-pale); color: var(--sapin); }
+.barres li.est-toit i::before { background: var(--laine); }
 .carte--sombre { background: var(--sapin); color: var(--lin); box-shadow: var(--ombre-formulaire); overflow: hidden; }
 .carte__photo { display: block; width: calc(100% + 2 * var(--space-6)); max-width: none; height: auto; aspect-ratio: 16 / 10; object-fit: cover; margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) var(--space-6); }
 .carte__photo { aspect-ratio: 3 / 2; }
