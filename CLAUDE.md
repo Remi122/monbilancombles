@@ -29,7 +29,7 @@ Il n'y a ni dépendance à installer, ni test automatique. Après une modificati
 Source de vérité : https://claude.ai/artifact/DaAmqyBUVqmgS8e9VT1SoQ (lire son README avant de toucher au visuel).
 
 - Couleurs : uniquement les variables de `:root` (`--sapin`, `--laine`, `--mousse`, `--lin`...). Jamais de code couleur écrit en dur ailleurs.
-- `--laine` (jaune) est réservé au bouton principal et au mot surligné. Texte posé sur `--laine` : `--sur-laine`, jamais en blanc.
+- `--laine` (jaune) est réservé au bouton principal, au mot surligné et au contour de 2 px du formulaire. Texte posé sur `--laine` : `--sur-laine`, jamais en blanc.
 - Bouton principal (`mbc-btn`) : fond `--laine-foncee`, survol `--laine-sombre`, texte `--blanc`. Choix de Rémi du 24 novembre 2026, en sachant que le contraste n'est que de 2,4:1 (le texte vert foncé sur `--laine` donnait 6,3:1).
 - Titres en Fraunces graisse 600, tout le reste en Instrument Sans. Texte courant à 17px minimum.
 - Espacements et rayons : variables `--space-*` et `--radius-*`.

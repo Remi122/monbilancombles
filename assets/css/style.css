@@ -116,7 +116,7 @@ sup { font-size: .65em; line-height: 0; }
 .hero__texte .hero__source { margin-top: var(--space-1); font-size: 14px; line-height: 21px; opacity: .8; }
 
 /* ---------- Formulaire ---------- */
-.form { background: var(--blanc); color: var(--sapin); border-radius: var(--radius-lg); box-shadow: var(--ombre-formulaire); padding: var(--space-6); scroll-margin-top: var(--space-4); }
+.form { background: var(--blanc); color: var(--sapin); border-radius: var(--radius-lg); box-shadow: 0 0 0 2px var(--laine), var(--ombre-formulaire); padding: var(--space-6); scroll-margin-top: var(--space-4); }
 .form__progres { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-6); }
 .form__segments { flex: 1; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: var(--space-1); }
 .form__segments i { height: 6px; border-radius: var(--radius-pill); background: var(--lin-fonce); transition: background-color .2s ease; }
