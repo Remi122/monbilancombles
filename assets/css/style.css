@@ -298,6 +298,18 @@ legend.form__question { margin-bottom: var(--space-3); }
   .mbc-option__texte { line-height: 20px; }
   .mbc-option__texte small { font-size: 13px; line-height: 16px; }
 }
+/* Téléphones hauts (700 px et plus) : la place ne manque pas, on aère le hero. */
+@media (max-width: 719px) and (min-height: 700px) {
+  .hero { padding: var(--space-6) 0 var(--space-8); }
+  .hero__grille { gap: var(--space-6); }
+  .hero__texte .hero__source { margin-top: calc(-1 * var(--space-4)); }
+  .form { padding-top: var(--space-6); padding-bottom: var(--space-6); }
+  .form__progres { margin-bottom: var(--space-6); }
+  .form__pas { gap: var(--space-4); }
+  legend.form__question { margin-bottom: var(--space-3); }
+  .mbc-options { gap: var(--space-3); }
+  .mbc-option { min-height: 56px; padding-top: var(--space-2); padding-bottom: var(--space-2); }
+}
 @media (max-width: 719px) and (max-height: 600px) {
   .hero { padding-top: var(--space-3); }
   .hero h1 { font-size: 22px; line-height: 26px; }
