@@ -107,8 +107,6 @@ sup { font-size: .65em; line-height: 0; }
 
 /* ---------- Accroche ---------- */
 .hero { position: relative; margin: 0 var(--space-2); padding: var(--space-8) 0; border-radius: calc(var(--radius-lg) * 1.5); background: var(--sapin); color: var(--lin); overflow: hidden; }
-.hero__motif { position: absolute; inset: 0; width: 100%; height: 100%; }
-.hero__motif path { fill: none; stroke: var(--lin); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; opacity: .07; }
 .hero__grille { position: relative; display: grid; gap: var(--space-8); padding-left: var(--space-4); padding-right: var(--space-4); }
 .hero h1 { font-size: 34px; line-height: 40px; letter-spacing: -.01em; margin-bottom: var(--space-4); }
 .hero h1 em { font-style: normal; color: var(--laine); }
@@ -204,7 +202,7 @@ legend.form__question { margin-bottom: var(--space-3); }
 .faq details p { padding: 0 0 var(--space-6); color: var(--sapin-700); max-width: 680px; }
 
 /* ---------- Appel final ---------- */
-.final { position: relative; overflow: hidden; background: var(--sapin); color: var(--lin); text-align: center; }
+.final { position: relative; background: var(--sapin); color: var(--lin); text-align: center; }
 .final .conteneur { position: relative; }
 .final h2 em { font-style: normal; color: var(--laine); background: none; box-shadow: none; }
 .final h2 { color: var(--lin); margin-left: auto; margin-right: auto; }
@@ -311,4 +309,59 @@ legend.form__question { margin-bottom: var(--space-3); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
+}
+
+/* ---------- Fonds de section ----------
+   Usage : <section class="section section--pale fond fond--chaleur">. */
+:root {
+--motif-rangs: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='64' viewBox='0 0 48 64'%3E%3Cpath fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' d='M12 22l12-10 12 10M36 54l12-10 12 10M-12 54l12-10 12 10'/%3E%3C/svg%3E");
+--motif-tuiles: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' d='M0 2a24 24 0 0 0 48 0M-24 26a24 24 0 0 0 48 0M24 26a24 24 0 0 0 48 0M-24 -22a24 24 0 0 0 48 0M24 -22a24 24 0 0 0 48 0'/%3E%3C/svg%3E");
+--motif-faitage-toits: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='144' viewBox='0 0 320 144'%3E%3Cpath fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' d='M6 136L160 8L314 136M83 136L160 72L237 136M122 136L160 104L198 136'/%3E%3C/svg%3E");
+--motif-faitage-isolant: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='144' viewBox='0 0 320 144'%3E%3Cpath fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' d='M45 136L160 40L275 136'/%3E%3C/svg%3E");
+--motif-chaleur: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='288' viewBox='0 0 240 288'%3E%3Cpath fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' d='M24 276q-12-16 0-32t0-32t0-32t0-32t0-32t0-32t0-32t0-32t0-32t0-32M72 180q-12-16 0-32t0-32t0-32t0-32t0-32t0-32t0-32M120 244q-12-16 0-32t0-32t0-32t0-32t0-32t0-32t0-32t0-32t0-32M168 148q-12-16 0-32t0-32t0-32t0-32t0-32t0-32M216 212q-12-16 0-32t0-32t0-32t0-32t0-32t0-32t0-32t0-32'/%3E%3C/svg%3E");
+--motif-laine: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='56' viewBox='0 0 192 56'%3E%3Crect y='40' width='192' height='16'/%3E%3Ccircle cx='-6' cy='40' r='18'/%3E%3Ccircle cx='20' cy='38' r='16'/%3E%3Ccircle cx='48' cy='32' r='20'/%3E%3Ccircle cx='80' cy='38' r='16'/%3E%3Ccircle cx='108' cy='30' r='22'/%3E%3Ccircle cx='140' cy='36' r='18'/%3E%3Ccircle cx='168' cy='32' r='20'/%3E%3Ccircle cx='186' cy='40' r='18'/%3E%3Ccircle cx='198' cy='40' r='18'/%3E%3Ccircle cx='34' cy='8' r='3'/%3E%3Ccircle cx='96' cy='3' r='3'/%3E%3Ccircle cx='150' cy='10' r='4'/%3E%3C/svg%3E");
+--motif-pente: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='40' viewBox='0 0 96 40'%3E%3Cpath d='M-6 50L48 5L102 50Z' stroke='%23000' stroke-width='8' stroke-linejoin='round'/%3E%3C/svg%3E");
+/* Bord droit du contenu : le motif de coin s'aligne sur le conteneur de 1200px. */
+--fond-bord: max(var(--space-6), calc((100% - 1200px) / 2 + var(--space-6)));
+}
+
+/* La section devient le repère du motif. Le motif passe sous le contenu, jamais dessus. */
+.fond { position: relative; isolation: isolate; }
+.fond::before, .fond::after { position: absolute; z-index: -1; pointer-events: none; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+
+/* Rangs : petits toits en semis. Sur sapin (hero, appel final). */
+.fond--rangs::before, .fond--rangs-mousse::before { content: ""; inset: 0; background: var(--lin); opacity: .07; -webkit-mask: var(--motif-rangs) 0 0 / var(--space-12) var(--space-16); mask: var(--motif-rangs) 0 0 / var(--space-12) var(--space-16); }
+/* Rangs sur mousse-pale (étapes). */
+.fond--rangs-mousse::before { background: var(--mousse); opacity: .13; }
+
+/* Tuiles : écailles ton sur ton. Sur lin-fonce (FAQ). */
+.fond--tuiles::before { content: ""; inset: 0; background: var(--ligne); opacity: .5; -webkit-mask: var(--motif-tuiles) 0 0 / var(--space-12) var(--space-12); mask: var(--motif-tuiles) 0 0 / var(--space-12) var(--space-12); }
+
+/* Faîtage : un grand toit en coin haut droit, avec sa couche d'isolant en laine. Sur blanc (aides). */
+.fond--faitage::before, .fond--faitage::after { content: ""; top: 0; right: var(--space-4); width: 142px; height: var(--space-16); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-position: right top; mask-position: right top; }
+.fond--faitage::before { background: var(--lin-fonce); -webkit-mask-image: var(--motif-faitage-toits); mask-image: var(--motif-faitage-toits); }
+.fond--faitage::after { background: var(--laine); -webkit-mask-image: var(--motif-faitage-isolant); mask-image: var(--motif-faitage-isolant); }
+
+/* Chaleur : des ondes qui montent et sortent par le haut de la section. Sur laine-pale (constat). */
+.fond--chaleur::before { content: ""; top: 0; right: var(--space-2); width: 80px; height: 96px; background: var(--laine); opacity: .55; -webkit-mask: var(--motif-chaleur) right top / contain no-repeat; mask: var(--motif-chaleur) right top / contain no-repeat; }
+
+/* Laine : une couche d'isolant soufflé posée en bas de la section. Sur lin (perdus ou aménagés). */
+.fond--laine::before { content: ""; left: 0; right: 0; bottom: 0; height: 42px; background: var(--laine); -webkit-mask: var(--motif-laine) center bottom / 144px 42px repeat-x; mask: var(--motif-laine) center bottom / 144px 42px repeat-x; }
+
+/* Pente : une pointe de toit qui dépasse en haut de la section, dans la couleur de la section. Sur l'appel final. */
+.fond--pente::after { content: ""; left: 50%; bottom: calc(100% - 1px); width: var(--space-24); height: 40px; margin-left: calc(var(--space-24) / -2); background-color: inherit; -webkit-mask: var(--motif-pente) center bottom / 100% 100% no-repeat; mask: var(--motif-pente) center bottom / 100% 100% no-repeat; }
+
+@media (min-width: 720px) {
+:root { --fond-bord: max(var(--space-8), calc((100% - 1200px) / 2 + var(--space-8))); }
+/* Sur tablette, les motifs de coin restent petits ; le titre s'arrête avant les ondes. */
+.fond--chaleur .titre-1 { max-width: calc(100% - 80px); }
+}
+@media (min-width: 1000px) {
+:root { --fond-bord: max(var(--space-16), calc((100% - 1200px) / 2 + var(--space-16))); }
+.fond--faitage::before, .fond--faitage::after { top: var(--space-6); right: var(--fond-bord); width: 320px; height: 144px; }
+.fond--chaleur::before { right: var(--fond-bord); width: 240px; height: 288px; }
+/* Le titre et l'intro s'arrêtent avant le grand motif de coin, pour qu'aucun trait ne passe sous le texte. */
+.fond--faitage .titre-1 { max-width: calc(100% - 320px - var(--space-6)); }
+.fond--chaleur .titre-1 { max-width: calc(100% - 240px - var(--space-6)); }
+.fond--chaleur .intro { max-width: min(680px, calc(100% - 240px - var(--space-6))); }
 }
