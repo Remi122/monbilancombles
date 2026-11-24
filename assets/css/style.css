@@ -7,7 +7,7 @@
 
 :root {
   --sapin: #173f35; --sapin-700: #2c5347; --sapin-500: #4d6259;
-  --laine: #f0b429; --laine-foncee: #d99a0b; --laine-pale: #fcefc7; --sur-laine: var(--sapin);
+  --laine: #f0b429; --laine-foncee: #d99a0b; --laine-sombre: #c08508; --laine-pale: #fcefc7; --sur-laine: var(--sapin);
   --mousse: #2d6a56; --mousse-pale: #dcebe3;
   --lin: #f6f4ec; --lin-fonce: #e9e5d6; --blanc: #ffffff;
   --erreur: #a01a4a; --erreur-pale: #f9e1ea;
@@ -54,8 +54,8 @@ sup { font-size: .65em; line-height: 0; }
 .lien-evitement:focus { top: var(--space-4); color: var(--lin); outline-color: var(--laine); }
 
 /* ---------- Bouton ---------- */
-.mbc-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 56px; padding: 0 var(--space-6); border: 0; border-radius: var(--radius-md); background: var(--laine); color: var(--sur-laine); font-family: var(--font-texte); font-size: 17px; line-height: 24px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background-color .15s ease; }
-.mbc-btn:hover { background: var(--laine-foncee); color: var(--sur-laine); }
+.mbc-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 56px; padding: 0 var(--space-6); border: 0; border-radius: var(--radius-md); background: var(--laine-foncee); color: var(--blanc); font-family: var(--font-texte); font-size: 17px; line-height: 24px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background-color .15s ease; }
+.mbc-btn:hover { background: var(--laine-sombre); color: var(--blanc); }
 .mbc-btn--bloc { display: flex; width: 100%; }
 .mbc-btn--secondaire { background: transparent; color: var(--sapin); box-shadow: inset 0 0 0 2px var(--sapin); }
 .mbc-btn--secondaire:hover { background: var(--sapin); color: var(--lin); }
