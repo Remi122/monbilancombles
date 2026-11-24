@@ -34,7 +34,7 @@ Source de vérité : https://claude.ai/artifact/DaAmqyBUVqmgS8e9VT1SoQ (lire son
 - Titres en Fraunces graisse 600, tout le reste en Instrument Sans. Texte courant à 17px minimum.
 - Espacements et rayons : variables `--space-*` et `--radius-*`.
 - Composants : classes `mbc-btn` (variantes `--secondaire`, `--bloc`, `--compact`), `mbc-champ`, `mbc-option`, `mbc-pastille`, `mbc-liste-coches`. Les réutiliser avant d'en créer.
-- En-tête : bouton compact « Demander mon étude gratuite » vers le formulaire, masqué sous 720 px (sur mobile, le formulaire est déjà sur le premier écran).
+- En-tête : bouton compact « Demander mon bilan gratuit » vers le formulaire, masqué sous 720 px (sur mobile, le formulaire est déjà sur le premier écran).
 - Le logo est une image. Ne pas le recolorer ni réécrire le nom en texte.
 - Pas de dégradé, pas d'emoji, pas de bleu-blanc-rouge : la marque est privée et ne doit pas ressembler à un site de l'État.
 
