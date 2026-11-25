@@ -37,6 +37,7 @@ Source de vérité : https://claude.ai/artifact/DaAmqyBUVqmgS8e9VT1SoQ (lire son
 - En-tête collant (logo + bouton compact « Vérifier mes aides »), géré par `assets/js/entete.js`, chargé sur les trois pages. Sur mobile, le bouton n'apparaît, avec un logo réduit, qu'une fois le formulaire sorti de l'écran, et jamais sous 360 px de large (il ne tient pas). La hauteur de l'en-tête doit rester la même avec ou sans bouton, sinon la page saute. Elle est aussi reprise dans `--entete-hauteur` (valeurs par défaut dans le CSS, mesure exacte par le script) pour que les ancres #faq, #aides… ne passent pas sous l'en-tête.
 - Le logo est une image. Ne pas le recolorer ni réécrire le nom en texte.
 - Pas de dégradé, pas d'emoji, pas de bleu-blanc-rouge : la marque est privée et ne doit pas ressembler à un site de l'État.
+- Exception décidée par Rémi le 25 novembre 2026, contre l'avis donné : logos RGE, CEE et MaPrimeRénov' en bas de la carte du formulaire (`.form__logos`). Risques signalés : le logo RGE est réservé aux entreprises qualifiées (Mon Bilan Combles ne l'est pas, ses artisans si) ; ceux de MaPrimeRénov' (Anah) et des CEE (ministère) sont encadrés par des chartes ; MaPrimeRénov' ne finance plus les combles seuls. Garder la phrase sous les logos, qui dit ce qu'ils sont et que Mon Bilan Combles en est indépendant. À faire valider par le juriste.
 
 ## Rédaction
 
