@@ -67,7 +67,7 @@
   }
 
   /* Mesure : chaque étape franchie et chaque demande envoyée partent dans le dataLayer, sans aucune
-     coordonnée. Google Tag Manager ne les lit qu'après un clic sur « Accepter » dans le bandeau cookies. */
+     coordonnée en clair. Google Tag Manager ne les lit qu'après un clic sur « Accepter » dans le bandeau cookies. */
   window.dataLayer = window.dataLayer || [];
   var mesurees = {};
 
@@ -81,6 +81,27 @@
     var cp = form.code_postal.value.trim();
     if (!/^\d{5}$/.test(cp)) return '';
     return cp.slice(0, 2) === '97' ? cp.slice(0, 3) : cp.slice(0, 2);
+  }
+
+  /* Conversions améliorées Google Ads : l'e-mail et le téléphone sont hachés (SHA-256) ici, dans le
+     navigateur. Seules ces empreintes vont dans le dataLayer, jamais les coordonnées en clair. Seule la
+     balise de conversion Google Ads les lit (variable GTM « Données utilisateur - lead »). */
+  function hacher(texte) {
+    return window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(texte)).then(function (b) {
+      return Array.prototype.map.call(new Uint8Array(b), function (x) { return ('0' + x.toString(16)).slice(-2); }).join('');
+    });
+  }
+
+  function empreintes() {
+    if (!window.crypto || !window.crypto.subtle || !window.TextEncoder) return Promise.reject(new Error('crypto'));
+    var email = form.email.value.trim().toLowerCase();
+    var parties = email.split('@');
+    if (parties[1] === 'gmail.com' || parties[1] === 'googlemail.com') email = parties[0].replace(/\./g, '') + '@' + parties[1];
+    var tel = chiffres(form.telephone.value);
+    tel = tel.charAt(0) === '0' ? '+33' + tel.slice(1) : '+' + tel;
+    return Promise.all([hacher(email), hacher(tel)]).then(function (h) {
+      return { sha256_email_address: h[0], sha256_phone_number: h[1] };
+    });
   }
 
   function mesurerPas(index) {
@@ -174,7 +195,13 @@
 
     boutonEnvoi.disabled = true;
     envoyer(config.webhookUrl, donnees()).then(function () {
-      mesurer('generate_lead', { statut: valeur('statut'), logement: valeur('logement'), combles: valeur('combles'), annee: valeur('annee'), departement: departement() });
+      var lead = { statut: valeur('statut'), logement: valeur('logement'), combles: valeur('combles'), annee: valeur('annee'), departement: departement() };
+      empreintes().then(function (u) {
+        lead.donnees_lead = u;
+        mesurer('generate_lead', lead);
+      }, function () {
+        mesurer('generate_lead', lead);
+      });
       document.getElementById('form-corps').hidden = true;
       var merci = document.getElementById('form-merci');
       merci.classList.add('est-visible');
