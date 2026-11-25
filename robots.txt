@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /gtm/
+
+Sitemap: https://mon-bilan-combles.fr/sitemap.xml

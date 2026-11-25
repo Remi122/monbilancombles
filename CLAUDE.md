@@ -79,5 +79,5 @@ Source de vérité : https://claude.ai/artifact/DaAmqyBUVqmgS8e9VT1SoQ (lire son
 - Renseigner `webhookUrl` dans `assets/js/config.js` et envoyer une demande de test.
 - Faire relire les deux pages légales par un juriste, y compris les obligations des plateformes de mise en relation (article L111-7 du code de la consommation).
 - Vérifier que chaque promesse de la page est tenue : gratuité, artisans tous RGE, appel puis bilan par e-mail avant tout déplacement, usage des coordonnées.
-- Retirer `<meta name="robots" content="noindex">` des trois pages.
+- Indexation ouverte le 25 novembre 2026 à la demande de Rémi : plus de `noindex`, une adresse canonique par page, `robots.txt` (masque `/gtm/`) et `sitemap.xml` à la racine. Ajouter toute nouvelle page au sitemap. Reste à déclarer le site et le sitemap dans Google Search Console.
 - Nom de domaine : mon-bilan-combles.fr (DNS chez OVH, branché dans les réglages GitHub Pages le 24 novembre 2026). Le fichier `CNAME` à la racine doit rester, sinon le domaine décroche. Une fois le certificat créé par GitHub, cocher « Enforce HTTPS ».
