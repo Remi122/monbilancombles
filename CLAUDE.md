@@ -7,7 +7,7 @@ Site statique, sans étape de build : HTML, CSS et JavaScript écrits à la main
 ## Fichiers
 
 - `index.html` : la landing (accroche et formulaire, garanties, constat, aides 2026, déroulé, combles perdus ou aménagés, FAQ, appel final). Les icônes sont dans un bloc `<symbol>` en haut du fichier et s'appellent avec `<use href="#i-nom">`.
-- `mentions-legales.html`, `confidentialite.html` : pages légales, complètes. La politique de confidentialité nomme les outils utilisés (Make, Google Sheets, Google Tag Manager, Google Analytics 4, Google Ads, Microsoft Clarity, GitHub) et dit qu'une demande peut partir chez plusieurs artisans. Tout nouvel outil (Meta par exemple) ou tout changement dans la transmission des demandes doit y être ajouté, ainsi que dans la case de consentement du formulaire.
+- `mentions-legales.html`, `confidentialite.html` : pages légales, complètes. La politique de confidentialité nomme les outils utilisés (Make, Google Sheets, Google Tag Manager, Google Analytics 4, Google Ads, Microsoft Clarity, GitHub) et dit que chaque demande part chez un seul artisan partenaire. Tout nouvel outil (Meta par exemple) ou tout changement dans la transmission des demandes doit y être ajouté, ainsi que dans la case de consentement du formulaire.
 - `assets/css/style.css` : tous les styles. Les tokens du design system sont recopiés dans le bloc `:root` en haut du fichier.
 - `assets/js/config.js` : réglages. `webhookUrl` est l'adresse du webhook Make.
 - `assets/js/form.js` : formulaire en 6 étapes (une question par écran), validation, envoi.
