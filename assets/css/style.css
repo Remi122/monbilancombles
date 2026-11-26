@@ -230,6 +230,7 @@ legend.form__question { margin-bottom: var(--space-3); }
 .pied a:focus-visible { outline-color: var(--laine); }
 .pied nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
 .pied__mention { max-width: 560px; margin-top: var(--space-4); }
+.pied__contact { margin-top: var(--space-2); }
 .pied__sources { margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--sapin-700); font-size: 13px; line-height: 20px; color: var(--mousse-pale); }
 .pied__sources p { max-width: 960px; }
 .pied__sources p + p { margin-top: var(--space-3); }
